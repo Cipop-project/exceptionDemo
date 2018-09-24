@@ -1,0 +1,57 @@
+### Demo: http://blog.720ui.com/2018/restclient_use/ ###
+### 1.1创建用户
+POST http://localhost:9090/result/getResult
+Accept : application/json;charset=UTF-8
+Content-Type: application/json
+#Cache-Control : no-cache
+
+#注意中间要空一行，否则会被人未是headers
+{
+  "name": "zzp"
+}
+
+#### 1.2删除用户
+#DELETE http://localhost:9002/interface/clients/10001
+#Accept : application/json
+#Content-Type: application/json;charset=UTF-8
+##Authorization: Basic client secret
+#Cache-Control : no-cache
+#
+#### 1.3修改用户
+#PUT http://localhost:9002/interface/clients/update
+#Accept : application/json
+#Content-Type: application/json;charset=UTF-8
+##Authorization: Basic client secret
+#Cache-Control : no-cache
+#
+#{
+#  "id": "10001",
+#  "username": "10001",
+#  "email": "it@ftl-express.fr",
+#  "phoneNumber": "33 710 56893488",
+#  "password": "fdfdsa",
+#  "language": "FR",
+#  "pricingType": "EUR",
+#  "advertisement": true,
+#  "activate": false,
+#  "image": "123",
+#  "clientType": "TENANT",
+#  "sexe": "SECRET",
+#  "description": "description1"
+#}
+#
+#### 1.4查找用户
+#GET http://localhost:9002/interface/clients/find/10001
+#Accept : application/json
+#Content-Type : application/json;charset=UTF-8
+##Authorization: Basic client secret
+#Cache-Control : no-cache
+#
+#### 1.5 关闭生产者之后，测试服务的熔断与回退
+#GET http://localhost:9002/interface/clients/find/100012
+#Accept : application/json
+#Content-Type : application/json;charset=UTF-8
+##Authorization: Basic client secret
+#Cache-Control : no-cache
+#
+###

@@ -8,6 +8,8 @@ import com.zzp.util.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+
 /**
  * Created by zhuzhengping on 2017/5/7.
  */
@@ -20,11 +22,13 @@ public class ResultController {
 
     /**
      * 返回体测试
-     * @param name
+     * @param
      * @return
      */
     @RequestMapping(value = "/getResult",method = RequestMethod.POST)
-    public Result getResult(@RequestParam("name") String name){
+//    @PostMapping("/getResult")
+    public Result getResult(@RequestBody HashMap<String, String> map){
+        String name= map.get("name");
         Result result = ResultUtil.success();
         try {
             if (name.equals("zzp")){

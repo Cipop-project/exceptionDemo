@@ -46,6 +46,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.11</version>
 		</dependency>
 		<!--阿里druid数据库链接依赖-->
 		<dependency>
@@ -93,10 +94,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<outputDirectory>/Users/zhuzhengping/Desktop/pjms</outputDirectory>
-					<finalName>Computer-Service</finalName>
-				</configuration>
+				<!--<configuration>-->
+					<!--<outputDirectory>/Users/zhuzhengping/Desktop/pjms</outputDirectory>-->
+					<!--<finalName>Computer-Service</finalName>-->
+				<!--</configuration>-->
 				<executions>
 					<execution>
 						<goals>
